@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopmentWithADot.LinqExtensions", "DevelopmentWithADot.LinqExtensions\DevelopmentWithADot.LinqExtensions.csproj", "{B8DEB30B-8DCC-44DA-A2E8-1FA3469BFFE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevelopmentWithADot.LinqExtensions.Tests", "DevelopmentWithADot.LinqExtensions.Tests\DevelopmentWithADot.LinqExtensions.Tests.csproj", "{36B014AA-66B9-4A9D-B3EA-9874656AACFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8DEB30B-8DCC-44DA-A2E8-1FA3469BFFE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8DEB30B-8DCC-44DA-A2E8-1FA3469BFFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8DEB30B-8DCC-44DA-A2E8-1FA3469BFFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8DEB30B-8DCC-44DA-A2E8-1FA3469BFFE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B014AA-66B9-4A9D-B3EA-9874656AACFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B014AA-66B9-4A9D-B3EA-9874656AACFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B014AA-66B9-4A9D-B3EA-9874656AACFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B014AA-66B9-4A9D-B3EA-9874656AACFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
