@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryableExtensions.cs" />
+    <Compile Include="RuntimeTypeBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\DevelopmentWithADot.snk">

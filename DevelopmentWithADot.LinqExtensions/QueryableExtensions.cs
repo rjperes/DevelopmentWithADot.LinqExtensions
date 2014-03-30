@@ -10,7 +10,7 @@ namespace DevelopmentWithADot.LinqExtensions
 	public static class QueryableExtensions
 	{
 		#region ThenBy
-		public static IOrderedQueryable<T> ThenBy<T>(this IOrderedQueryable<T> query, String path)
+		public static IOrderedQueryable<T> ThenByPath<T>(this IOrderedQueryable<T> query, String path)
 		{
 			Type currentType = typeof(T);
 			String[] parts = path.Split(',');
@@ -45,7 +45,7 @@ namespace DevelopmentWithADot.LinqExtensions
 			return (query);
 		}
 
-		public static IOrderedQueryable<T> ThenByDescending<T>(this IOrderedQueryable<T> query, String path)
+		public static IOrderedQueryable<T> ThenByDescendingPath<T>(this IOrderedQueryable<T> query, String path)
 		{
 			Type currentType = typeof(T);
 			String[] parts = path.Split(',');
@@ -283,6 +283,16 @@ namespace DevelopmentWithADot.LinqExtensions
 		#endregion
 
 		#region Select
+		public static IQueryable Select<T>(this IQueryable<T> query, params String [] propertyNames)
+		{
+			var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty | BindingFlags.SetProperty).Where(x => propertyNames.Contains(x.Name));
+			var anonType = RuntimeTypeBuilder.GetDynamicType(Guid.NewGuid().ToString(), props);
+			
+
+
+			return Queryable.Select(query, Expression.Lambda(Expression.New(anonType.GetConstructor(props.Select(x => x.PropertyType).ToArray()), props.Select(x => Expression.MakeMemberAccess() )));
+		}
+
 		public static IQueryable Select<T>(this IQueryable<T> query, String projection, params Object [] values)
 		{
 			Assembly asm = typeof(UpdatePanel).Assembly;
